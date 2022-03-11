@@ -1,3 +1,10 @@
+<!-- SHAPE -->
+<div class="position-relative">
+    <div class="shape shape-bottom shape-fluid-x text-white">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>      </div>
+</div>
+
+
 <!-- FOOTER -->
 <footer class="py-8 py-md-11 bg-dark">
     <div class="container">
@@ -5,33 +12,85 @@
             <div class="col-12 col-md-4 col-lg-3">
 
                 <!-- Brand -->
-                <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
+                <img src="{{ asset('media/logo/logo_rlb.png') }}" alt="..." class="footer-brand img-fluid mb-2">
 
                 <!-- Text -->
                 <p class="text-gray-700 mb-2">
-                    A better way to build.
+                    Suivez-Nous
                 </p>
 
                 <!-- Social -->
                 <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
                     <li class="list-inline-item list-social-item me-3">
                         <a href="#!" class="text-decoration-none">
-                            <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+                            <img src="{{ asset('media/logo/instagram.png') }}" class="list-social-icon" alt="..."
+                                 data-aos="fade-up" data-aos-delay="200"
+                            >
                         </a>
                     </li>
                     <li class="list-inline-item list-social-item me-3">
                         <a href="#!" class="text-decoration-none">
-                            <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
+                            <img src="{{ asset('media/logo/facebook.png') }}" class="list-social-icon" alt="..."
+                                 data-aos="fade-up" data-aos-delay="300"
+                            >
                         </a>
                     </li>
                     <li class="list-inline-item list-social-item me-3">
                         <a href="#!" class="text-decoration-none">
-                            <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                            <img src="{{ asset('media/logo/twitter.png') }}" class="list-social-icon" alt="..."
+                                 data-aos="fade-up" data-aos-delay="400"
+                            >
                         </a>
                     </li>
                     <li class="list-inline-item list-social-item">
                         <a href="#!" class="text-decoration-none">
-                            <img src="./assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
+                            <img src="{{ asset('media/logo/linkedin.png') }}" class="list-social-icon" alt="..."
+                                 data-aos="fade-up" data-aos-delay="500"
+
+                            >
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <!-- Heading -->
+                <h6 class="fw-bold text-uppercase text-white">
+                    Plans du site
+                </h6>
+
+                <!-- List -->
+                <ul class="list-unstyled text-white mb-6 mb-md-8 mb-lg-0">
+                    <li class="mb-3">
+                        <a href="#!" class="text-reset">
+                            Qui sommes-nous ?
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#!" class="text-reset">
+                            Nos solutions ADB
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#!" class="text-reset">
+                            Actualites
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#!" class="text-reset">
+                            Foire aux questions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-reset">
+                            Nous contacter
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#!" class="text-reset">
+                            Mentions légales
                         </a>
                     </li>
                 </ul>
@@ -40,67 +99,31 @@
             <div class="col-6 col-md-4 col-lg-2">
 
                 <!-- Heading -->
-                <h6 class="fw-bold text-uppercase text-gray-700">
-                    Products
+                <h6 class="fw-bold text-uppercase text-white">
+                    NOS SOLUTIONS
                 </h6>
 
                 <!-- List -->
-                <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+                <ul class="list-unstyled text-white mb-6 mb-md-8 mb-lg-0">
                     <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            Page Builder
+                            Garantie financière et assurance
                         </a>
                     </li>
+
                     <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            UI Kit
-                        </a>
-                    </li>
-                    <li class="mb-3">
-                        <a href="#!" class="text-reset">
-                            Styleguide
-                        </a>
-                    </li>
-                    <li class="mb-3">
-                        <a href="#!" class="text-reset">
-                            Documentation
+                            Garantie Propriétaire Non Occupant (PNO)
                         </a>
                     </li>
                     <li>
                         <a href="#!" class="text-reset">
-                            Changelog
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-
-                <!-- Heading -->
-                <h6 class="fw-bold text-uppercase text-gray-700">
-                    Services
-                </h6>
-
-                <!-- List -->
-                <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
-                    <li class="mb-3">
-                        <a href="#!" class="text-reset">
-                            Documentation
-                        </a>
-                    </li>
-                    <li class="mb-3">
-                        <a href="#!" class="text-reset">
-                            Changelog
-                        </a>
-                    </li>
-                    <li class="mb-3">
-                        <a href="#!" class="text-reset">
-                            Pagebuilder
+                            Protection Juridique bailleur
                         </a>
                     </li>
                     <li>
                         <a href="#!" class="text-reset">
-                            UI Kit
+                            Garantie loyers impayés
                         </a>
                     </li>
                 </ul>
@@ -109,74 +132,72 @@
             <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
 
                 <!-- Heading -->
-                <h6 class="fw-bold text-uppercase text-gray-700">
-                    Connect
+                <h6 class="fw-bold text-uppercase text-white">
+                    DERNIÈRES QUESTIONS
                 </h6>
 
                 <!-- List -->
-                <ul class="list-unstyled text-muted mb-0">
+                <ul class="list-unstyled text-white mb-0">
                     <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            Page Builder
-                        </a>
-                    </li>
-                    <li class="mb-3">
-                        <a href="#!" class="text-reset">
-                            UI Kit
+                            A quel moment déclarer le sinistre ?
                         </a>
                     </li>
                     <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            Styleguide
+                            Puis-je faire établir l’état des lieux de sortie par un huissier sans
+                            convoquer les anciens locataires ?
                         </a>
                     </li>
                     <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            Documentation
+                            A quel moment déclarer le sinistre ?
                         </a>
                     </li>
                     <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            Changelog
+                            A quel moment dois-je déclarer le sinistre ?
                         </a>
                     </li>
                     <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            Documentation
+                            Quand faut-il mandater l’huissier de justice pour délivrer
+                            le commandement de payer au(x) locataire (s) ?
                         </a>
                     </li>
-                    <li>
+                    <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            Changelog
+                            Quand faut-il envoyer la mise en demeure ?
                         </a>
                     </li>
+
                 </ul>
 
             </div>
-            <div class="col-6 col-md-4 col-lg-2">
+
+            <div class="col-6 col-md-4 col-lg-3">
 
                 <!-- Heading -->
-                <h6 class="fw-bold text-uppercase text-gray-700">
-                    Legal
+                <h6 class="fw-bold text-uppercase text-white">
+                    NOUS CONTACTER </br>
+                    PGA ASSURANCES
                 </h6>
 
                 <!-- List -->
-                <ul class="list-unstyled text-muted mb-0">
+                <ul class="list-unstyled text-white mb-0">
                     <li class="mb-3">
                         <a href="#!" class="text-reset">
-                            Documentation
+                            91 rue Saint Lazare </br>
+                            75 009 Paris
                         </a>
                     </li>
                     <li class="mb-3">
-                        <a href="#!" class="text-reset">
-                            Changelog
-                        </a>
+                        <p href="#!" class="text-white">
+                            Tél.:+33(0)1.44.63.19.40</br>
+                            Fax:+33(0)1.48.78.44.60
+                        </p>
                     </li>
-                    <li>
-                        <a href="#!" class="text-reset">
-                            Pagebuilder
-                        </a>
-                    </li>
+
                 </ul>
 
             </div>
