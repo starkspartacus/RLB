@@ -1,0 +1,116 @@
+@import "scss/theme";
+@import "scss/libs";
+
+*, ::before, ::after,
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/** logo nav **/
+.logo-nav
+{
+ color: #42BA96;
+}
+
+
+
+/** fin **/
+
+/** body acceuil */
+.body-group-rlb
+{
+  font-size: 1.3rem;
+  font-family: Roboto, sans-serif;
+}
+
+.body-group-rlb::before
+{
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 5px;
+  background: #42BA96;
+  margin-bottom: 15px;
+}
+
+
+
+ /**fin**/
+
+/** offre **/
+.container-offre
+{
+  position: relative;
+  margin-top: 5rem;
+  right: 15%;
+  display: block;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+/** fin **/
+
+/** raison**/
+.raison-container
+{
+  position: relative;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.raison-content a
+{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/**fin raison **/
+
+
+footer li
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+footer li p
+{
+  color: white;
+}
+
+/** btn*/
+.btn
+{
+ cursor: pointer;
+}
+/** fin btn */
+
+/** mention */
+
+.mention{
+  font-size: 1rem;
+}
+
+/** fin mention */
+
+/** turbo ux */
+
+.turbo-progress-bar {
+  height: 5px;
+  background-color: red;
+}
+
+/* fin turbo ux */
