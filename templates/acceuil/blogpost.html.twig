@@ -21,6 +21,7 @@
             </div>
         </div> <!-- / .row -->
         <div class="row">
+            {% for article in articles %}
 
             <div class="col-12 col-md-6 col-lg-4 d-flex">
 
@@ -31,7 +32,7 @@
                     <a class="card-img-top" href="#!">
 
                         <!-- Image -->
-                        <img src="{{ asset('media/logo/photo-4.jpg') }}" alt="..." class="card-img-top">
+                        <img src="{{ article.file }}" alt="image article" class="card-img-top">
 
                         <!-- Shape -->
                         <div class="position-relative">
@@ -45,13 +46,13 @@
                     <a class="card-body" href="#!">
 
                         <!-- Heading -->
-                        <h3>
-                            Titre de l'actualité
+                        <h3 class="text-capitalize">
+                            {{ article.title }}
                         </h3>
 
                         <!-- Text -->
                         <p class="mb-0 text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec condimentum quam.
+                            {{ article.content|u.truncate(200, '...', false) }}
                         </p>
 
                     </a>
@@ -62,10 +63,6 @@
                         <!-- Divider -->
                         <hr class="card-meta-divider">
 
-                        <!-- Avatar -->
-                        <div class="avatar avatar-sm me-2">
-                            <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                        </div>
 
                         <!-- Author -->
                         <h6 class="text-uppercase text-muted me-2 mb-0">
@@ -74,7 +71,7 @@
 
                         <!-- Date -->
                         <p class="h6 text-uppercase text-muted mb-0 ms-auto">
-                            <time datetime="2019-05-02">Publié le 22/02/2022</time>
+                            <time datetime="2019-05-02">Publié le {{ article.createdAt|date('d/m/Y') }}</time>
                         </p>
 
                     </a>
@@ -82,6 +79,7 @@
                 </div>
 
             </div>
+            {% endfor %}
 
         </div> <!-- / .row -->
     </div> <!-- / .container -->
