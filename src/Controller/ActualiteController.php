@@ -11,7 +11,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ActualiteController extends AbstractController
 {
-    #[Route('/actualite', name: 'app_actualite')]
+
+    /**
+     * @Route ("/actualité", name="app_actualite")
+     */
 
     public function index(
         ArticleRepository $articleRepository,
@@ -31,4 +34,7 @@ class ActualiteController extends AbstractController
             'articles' => $articles,
         ]);
     }
+
+
+
 }

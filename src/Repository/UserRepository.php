@@ -62,6 +62,19 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->_em->flush();
     }
 
+    /**
+     * Pour Récupérer la Redactrice
+     */
+
+    public function getRedactrice()
+    {
+        return $this->createQueryBuilder('r')
+            ->where('r.roles LIKE : roles')
+            ->setParameter('roles', '%"ROLE_REDACTRICE"%')
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
     // /**
     //  * @return User[] Returns an array of User objects
     //  */
