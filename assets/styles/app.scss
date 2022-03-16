@@ -114,3 +114,25 @@ footer li p
 }
 
 /* fin turbo ux */
+
+/** poursuivre la lecture */
+
+.underline::after{
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+  width: 10%;
+  height: 5px;
+  background: #D6723B;
+}
+
+.underline-title{
+  color: #0b67c0;
+  font-weight: bold;
+  font-size: 45px;
+  font-family: Roboto, sans-serif;
+  line-height: 60px;
+}
+
+/** Fin poursuivre la lecture */

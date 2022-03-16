@@ -1,0 +1,86 @@
+
+<!-- ARTICLES -->
+<section class="pt-7 pt-md-10 bg-gray-300 ">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-12 col-md">
+
+                <!-- Heading -->
+                <h2 class="mb-0 underline-title">
+                    <span class="underline">P</span>oursuivre la lecture
+                </h2>
+
+            </div>
+            <div class="col-12 col-md-auto">
+
+                <!-- Button -->
+                <a href="{{ path('app_actualite') }}" class="btn btn-sm btn-outline-gray-300 d-none d-md-inline">
+                    Retour à l'actualités
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row ">
+            {% for article in treeArticles %}
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex mb-7 lift lift-lg">
+
+                    <!-- Card -->
+                    <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg" data-aos="zoom-in-up">
+
+                        <!-- Image -->
+                        <a class="card-img-top" href="{{ path('id_actualite', {'id':article.id}) }}">
+
+                            <!-- Image -->
+                            <img src="{{ article.file }}" alt="image article" class="card-img-top">
+
+                            <!-- Shape -->
+                            <div class="position-relative">
+                                <div class="shape shape-bottom shape-fluid-x text-white">
+                                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
+                            </div>
+
+                        </a>
+
+                        <!-- Body -->
+                        <a class="card-body" href="{{ path('id_actualite', {'id':article.id}) }}">
+
+                            <!-- Heading -->
+                            <h3 class="text-capitalize">
+                                {{ article.title }}
+                            </h3>
+
+                            <!-- Text -->
+                            <p class="mb-0 text-muted">
+                                {{ article.content|u.truncate(200, '...', false) }}
+                            </p>
+
+                        </a>
+
+                        <!-- Meta -->
+                        <a class="card-meta mt-auto" href="{{ path('id_actualite', {'id':article.id}) }}">
+
+                            <!-- Divider -->
+                            <hr class="card-meta-divider">
+
+
+                            <!-- Author -->
+                            <h6 class=" text-muted me-2 mb-0 badge bg-primary-soft">
+                                Lire la suite
+                            </h6>
+
+                            <!-- Date -->
+                            <p class="h6 text-muted mb-0 ms-auto">
+                                <time datetime="2019-05-02">Publié le {{ article.createdAt|date('d/m/Y') }}</time>
+                            </p>
+
+                        </a>
+
+                    </div>
+
+                </div>
+            {% endfor %}
+
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>

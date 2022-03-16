@@ -54,15 +54,24 @@ class ActualiteController extends AbstractController
      * @Route ("/actualité/{id}", name="id_actualite")
      */
 
-    public function show(ArticleRepository $articleRepository, $id): Response
+    public function show(ArticleRepository $articleRepository, $id, CategorieRepository $categorieRepository): Response
     {
 
-        $article = $articleRepository->find($id);
+        $articles = $articleRepository->find($id);
+        $categories = $categorieRepository->findAll();
+        $allArticles = $articleRepository->findAll();
+        $treeArticles = $articleRepository->lastTree();
 
+
+        if(!$articles){
+           return $this->redirectToRoute('app_actualite');
+        }
 
         return $this->render('actualite/show.html.twig', [
-            'article' => $article,
-
+            'articles' => $articles,
+            'categories' => $categories,
+            'allArticles'=> $allArticles,
+            'treeArticles' => $treeArticles,
 
         ]);
     }
