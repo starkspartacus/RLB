@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\ArticleRepository;
+use App\Repository\CategorieRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,7 +20,8 @@ class ActualiteController extends AbstractController
     public function index(
         ArticleRepository $articleRepository,
         PaginatorInterface $paginator,
-        Request $request
+        Request $request,
+        CategorieRepository $categorieRepository
     ): Response {
 
         $article = $articleRepository->findAll();
@@ -30,8 +32,12 @@ class ActualiteController extends AbstractController
              6
          );
 
+         $categories = $categorieRepository->findAll();
+
         return $this->render('actualite/index.html.twig', [
             'articles' => $articles,
+            'categories' =>$categories,
+
         ]);
     }
 
