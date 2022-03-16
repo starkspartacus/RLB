@@ -136,3 +136,27 @@ footer li p
 }
 
 /** Fin poursuivre la lecture */
+
+  /** badge-categorie */
+
+.underline::after{
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+  width: 10%;
+  height: 5px;
+  background: #D6723B;
+}
+
+.badge-categorie{
+  position: absolute;
+  bottom: 40px;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+
+}
+
+/** badge-categorie */

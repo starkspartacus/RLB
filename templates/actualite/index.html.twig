@@ -30,10 +30,10 @@
                     </h1><br>
                     <div class="text-center">
 
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="Default select example" >
                             <option selected>Filtrer nos actualités</option>
                             {% for categorie in categories %}
-                            <option value="1">{{ categorie.nom }}</option>
+                            <option value="1" >{{ categorie.nom }}</option>
                             {% endfor %}
                         </select>
 
@@ -44,7 +44,7 @@
             </div> <!-- / .row -->
             <div class="row">
                 {% for article in articles %}
-
+                    {% for categorie in categories %}
                     <div class="col-12 col-md-6 col-lg-4 d-flex mt-8 lift lift-lg">
 
                         <!-- Card -->
@@ -61,7 +61,7 @@
                                     <div class="shape shape-bottom shape-fluid-x text-white">
                                         <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor"/></svg>                  </div>
                                 </div>
-
+                                <span class="badge bg-danger badge-categorie">{{ categorie.nom }}</span>
 
 
                             <!-- Body -->
@@ -102,6 +102,7 @@
                         </div>
 
                     </div>
+                        {% endfor %}
                 {% endfor %}
 
             </div> <!-- / .row -->

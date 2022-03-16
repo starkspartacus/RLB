@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Categorie;
 use App\Repository\ArticleRepository;
 use App\Repository\CategorieRepository;
 use Knp\Component\Pager\PaginatorInterface;
@@ -24,22 +25,15 @@ class ActualiteController extends AbstractController
         CategorieRepository $categorieRepository
     ): Response {
 
-        $categorie = $categorieRepository->findAll();
+        $categories = $categorieRepository->findAll();
         $article = $articleRepository->findAll();
 
-        $dataCat = $categorie;
         $data = $article;
          $articles = $paginator->paginate(
              $data,
              $request->query->getInt('page', 1),
              6
          );
-
-        $categories = $paginator->paginate(
-            $dataCat,
-            $request->query->getInt('page', 1),
-            6
-        );
 
 
 
@@ -75,5 +69,7 @@ class ActualiteController extends AbstractController
 
         ]);
     }
+
+
 
 }
