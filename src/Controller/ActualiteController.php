@@ -24,7 +24,10 @@ class ActualiteController extends AbstractController
         CategorieRepository $categorieRepository
     ): Response {
 
+        $categorie = $categorieRepository->findAll();
         $article = $articleRepository->findAll();
+
+        $dataCat = $categorie;
         $data = $article;
          $articles = $paginator->paginate(
              $data,
@@ -32,7 +35,13 @@ class ActualiteController extends AbstractController
              6
          );
 
-         $categories = $categorieRepository->findAll();
+        $categories = $paginator->paginate(
+            $dataCat,
+            $request->query->getInt('page', 1),
+            6
+        );
+
+
 
         return $this->render('actualite/index.html.twig', [
             'articles' => $articles,
@@ -41,6 +50,21 @@ class ActualiteController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route ("/actualité/{id}", name="id_actualite")
+     */
 
+    public function show(ArticleRepository $articleRepository, $id): Response
+    {
+
+        $article = $articleRepository->find($id);
+
+
+        return $this->render('actualite/show.html.twig', [
+            'article' => $article,
+
+
+        ]);
+    }
 
 }
