@@ -29,7 +29,8 @@ class ArticleCrudController extends AbstractCrudController
             TextareaField::new('content'),
             TextField::new('slug')->hideOnForm(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            ImageField::new('file')->setBasePath('/uploads/articles')->onlyOnIndex()
+            ImageField::new('file')->setBasePath('/uploads/articles')->onlyOnIndex(),
+
 
         ];
     }

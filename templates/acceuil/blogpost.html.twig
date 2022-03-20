@@ -29,7 +29,7 @@
                 <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg " data-aos="zoom-in-up">
 
                     <!-- Image -->
-                    <a class="card-img-top" href="#!">
+                    <a class="card-img-top" href="{{ path('id_actualite', {'id':article.id}) }}">
 
                         <!-- Image -->
                         <img src="{{ article.file }}" alt="image article" class="card-img-top">
@@ -44,7 +44,7 @@
                     </a>
 
                     <!-- Body -->
-                    <a class="card-body" href="#!">
+                    <a class="card-body" href="{{ path('id_actualite', {'id':article.id}) }}">
 
                         <!-- Heading -->
                         <h3 class="text-capitalize">
@@ -59,7 +59,7 @@
                     </a>
 
                     <!-- Meta -->
-                    <a class="card-meta mt-auto" href="#!">
+                    <a class="card-meta mt-auto" href="{{ path('id_actualite', {'id':article.id}) }}">
 
                         <!-- Divider -->
                         <hr class="card-meta-divider">
