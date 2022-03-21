@@ -70,6 +70,24 @@ class ActualiteController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route ("/actualité/{slug}", name="actualite_categorie")
+     */
+    public function categorie(CategorieRepository $categorieRepository,$slug , ArticleRepository $articleRepository): Response
+    {
+        $categories = $categorieRepository->findAll($slug);
+        $articles = $articleRepository->findAll();
+
+        return $this->render('actualite/categorie.html.twig', [
+            'categories' => $categories,
+            'articles' => $articles
+
+
+        ]);
+
+    }
+
+
 
 
 }
