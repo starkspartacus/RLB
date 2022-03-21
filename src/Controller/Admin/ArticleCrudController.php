@@ -34,9 +34,10 @@ class ArticleCrudController extends AbstractCrudController
                     ->setBasePath("uploads/articles")
                     ->setRequired(false)
             ,
-            AssociationField::new('categorie'),
+            AssociationField::new('categorie')->autocomplete(),
             SlugField::new('slug')
                 ->setTargetFieldName('title'),
+            DateTimeField::new('createdAt', 'Date de Création')->hideOnForm(),
 
         ];
     }
