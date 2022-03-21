@@ -32,7 +32,7 @@
                     <a class="card-img-top" href="{{ path('id_actualite', {'id':article.id}) }}">
 
                         <!-- Image -->
-                        <img src="{{ article.file }}" alt="image article" class="card-img-top">
+                        <img src="/uploads/articles/{{ article.file }}" alt="image article" class="card-img-top">
 
                         <!-- Shape -->
                         <div class="position-relative">
@@ -64,10 +64,8 @@
                         <!-- Divider -->
                         <hr class="card-meta-divider">
 
-
-                        <!-- Author -->
-                        <h6 class="text-uppercase text-muted me-2 mb-0">
-                            Adolfo
+                        <h6 class=" text-muted me-2 mb-0 badge bg-primary-soft">
+                            Lire la suite
                         </h6>
 
                         <!-- Date -->

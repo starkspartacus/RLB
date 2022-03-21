@@ -46,7 +46,7 @@ class Article
 
     public function __construct()
     {
-        $this->created_At = new \DateTime('now');
+        $this->created_At = new \DateTime();
         $this->categorie = new ArrayCollection();
     }
 

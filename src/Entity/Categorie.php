@@ -30,6 +30,8 @@ class Categorie
     public function __construct()
     {
         $this->articles = new ArrayCollection();
+
+
     }
 
     public function getId(): ?int
@@ -100,5 +102,8 @@ class Categorie
         return $this;
     }
 
-
+    public function __toString()
+    {
+        return $this->getNom();
+    }
 }

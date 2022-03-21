@@ -5,13 +5,15 @@ namespace App\Controller\Admin;
 use App\Entity\Article;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use Vich\UploaderBundle\Form\Type\VichImageType;
+
 
 class ArticleCrudController extends AbstractCrudController
 {
@@ -26,11 +28,15 @@ class ArticleCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('title'),
-            TextareaField::new('content'),
-            TextField::new('slug')->hideOnForm(),
-            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            ImageField::new('file')->setBasePath('/uploads/articles')->onlyOnIndex(),
-
+            TextEditorField::new('content'),
+            ImageField::new('file')
+                    ->setUploadDir("public/uploads/articles")
+                    ->setBasePath("uploads/articles")
+                    ->setRequired(false)
+            ,
+            AssociationField::new('categorie'),
+            SlugField::new('slug')
+                ->setTargetFieldName('title'),
 
         ];
     }
