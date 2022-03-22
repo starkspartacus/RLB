@@ -37,7 +37,7 @@ class ArticleCrudController extends AbstractCrudController
             AssociationField::new('categorie')->autocomplete(),
             SlugField::new('slug')
                 ->setTargetFieldName('title'),
-            DateTimeField::new('createdAt', 'Date de Création')->hideOnForm(),
+
 
         ];
     }
