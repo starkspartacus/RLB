@@ -11,7 +11,7 @@
     <div class="container py-md-13">
 
     </div> <!-- / .container -->
-    <h2 class="text-center mb-4 text-white-70" data-aos="zoom-in">
+    <h2 class="text-center mb-4 text-white" data-aos="zoom-in">
         Pourquoi nos clients choissent<span class="fw-bold text-white"> Rambaud Labrosse.</span>
     </h2>
     <div class="row justify-content-center mt-5" data-aos="zoom-in">
@@ -40,7 +40,9 @@
 
                         <!-- Text -->
                         <p class="text-gray-700 mb-5">
-                            Possibilité de mettre du bla bla ici
+                            Une équipe professionnelle compétente pour satisfaire vos besoins les plus pointus.
+                            <br>
+
                         </p>
 
                         <!-- Badge -->
@@ -62,8 +64,8 @@
                 <div class="card-body text-center">
 
                     <!-- Icon -->
-                    <div class="icon-circle bg-primary text-white mb-5">
-                        <i class="fe fe-users"></i>
+                    <div class="icon-circle text-white mb-5">
+                        <img src="{{ asset('media/logo/icon-classement.svg') }}"  alt="classement"/>
                     </div>
 
                     <!-- Heading -->
@@ -73,13 +75,14 @@
 
                     <!-- Text -->
                     <p class="text-gray-700 mb-5">
-                        Possibilité de mettre du bla bla ici
+                        + de <span class="classement" data-countup='{"startVal": 0, "decimalPlaces": 0}' data-to="30" data-aos data-aos-id="countup:in"> 0</span>  ans sur le marché du courtage en assurances. 21eme courtier français (classement Argus 2013).
+                        <br>
                     </p>
 
                     <!-- Badge -->
                     <span class="badge rounded-pill bg-dark-soft">
-                  <span class="h6 text-uppercase">
-                    un button ici à voir
+                  <span class="h6 text-white">
+                    <a href="#" class="text-decoration-none">En savoir plus</a>
                   </span>
                 </span>
 
@@ -107,7 +110,9 @@
 
                     <!-- Text -->
                     <p class="text-gray-700 mb-5">
-                        Possibilité de mettre du bla bla ici
+                        L'équipe est à votre écoute pour répondre à vos attentes.
+                        <br>
+                        <br>
                     </p>
 
                     <!-- Badge -->
@@ -124,4 +129,7 @@
         </div>
 
     </div>
+
+
 </section>
+{{ include('acceuil/devistemplate.html.twig') }}
