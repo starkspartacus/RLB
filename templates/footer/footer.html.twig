@@ -12,10 +12,12 @@
             <div class="col-12 col-md-4 col-lg-3">
 
                 <!-- Brand -->
-                <img src="{{ asset('media/logo/logo_rlb.png') }}" alt="Rambaud Labrosse logo" class="footer-brand img-fluid mb-2">
+                <a href="{{ path('home') }}">
+                    <img src="{{ asset('media/logo/logo_rlb.png') }}" alt="Rambaud Labrosse logo" class="footer-brand img-fluid mb-2">
+                </a>
 
                 <!-- Text -->
-                <p class="text-gray-700 mb-2 text-white">
+                <p class=" mb-2 text-white">
                     Suivez-Nous
                 </p>
 
@@ -74,7 +76,7 @@
                         </a>
                     </li>
                     <li class="mb-3">
-                        <a href="#!" class="text-reset">
+                        <a href="{{ path('app_actualite') }}" class="text-reset">
                             Actualites
                         </a>
                     </li>
@@ -202,7 +204,7 @@
 
             </div>
             <hr>
-            <small class="text-center text-white">&copy; Rambaud Labrosse 2022 - Mentions légales
+            <small class="text-center text-white">&copy; Rambaud Labrosse 2022 - <a href="#" class="text-decoration-none text-white">Mentions légales</a>
                 - <a href="{{ path('app_login') }}" class="text-decoration-none text-white">Espace privé</a>
             </small>
         </div> <!-- / .row -->
