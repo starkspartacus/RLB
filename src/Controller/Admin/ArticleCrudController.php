@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Article;
+use ContainerERomcsN\getActionsService;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
@@ -21,6 +22,8 @@ class ArticleCrudController extends AbstractCrudController
     {
         return Article::class;
     }
+
+    
 
 
     public function configureFields(string $pageName): iterable
