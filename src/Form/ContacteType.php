@@ -3,10 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Contacte;
-use Doctrine\DBAL\Types\TextType;
+
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\UX\Dropzone\Form\DropzoneType;
 
 class ContacteType extends AbstractType
 {
@@ -18,7 +22,8 @@ class ContacteType extends AbstractType
             ->add('telephone', )
             ->add('email')
             ->add('content')
-            ->add('file')
+            ->add('file', DropzoneType::class)
+            ->add('Envoyer', SubmitType::class)
         ;
     }
 

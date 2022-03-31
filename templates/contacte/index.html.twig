@@ -41,7 +41,6 @@
             </div> <!-- / .row -->
             <div class="row">
                 <div class="col-12 col-md-4 text-center border-end border-gray-300">
-
                     <!-- Heading -->
                     <h6 class="text-uppercase text-gray-700 mb-1">
                         Message us
@@ -109,31 +108,36 @@
                 <div class="col-12 col-md-12 col-lg-10">
 
                     <!-- Form -->
+                    {{ form_start(form) }}
                     <form>
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <div class="form-group mb-5">
-
-                                    <!-- Label -->
-                                    <label class="form-label" for="contactName">
-                                        Full name
-                                    </label>
-
+                                <div class="form-group mb-5 ">
                                     <!-- Input -->
-                                    <input class="form-control" id="contactName" type="text" placeholder="Full name">
+                                    {{ form_row(form.prenom) }}
 
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
-                                <div class="form-group mb-5">
-
-                                    <!-- Label -->
-                                    <label class="form-label" for="contactEmail">
-                                        Email
-                                    </label>
-
+                                <div class="form-group mb-5 ">
                                     <!-- Input -->
-                                    <input class="form-control" id="contactEmail" type="email" placeholder="hello@domain.com">
+                                    {{ form_row(form.nom) }}
+
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group mb-5 ">
+                                    <!-- Input -->
+                                    {{ form_row(form.email) }}
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group mb-5 ">
+                                    <!-- Input -->
+                                    {{ form_row(form.telephone) }}
 
                                 </div>
                             </div>
@@ -142,28 +146,21 @@
                             <div class="col-12">
                                 <div class="form-group mb-7 mb-md-9">
 
-                                    <!-- Label -->
-                                    <label class="form-label" for="contactMessage">
-                                        What can we help you with?
-                                    </label>
-
-                                    <!-- Input -->
-                                    <textarea class="form-control" id="contactMessage" rows="5" placeholder="Tell us what we can help you with!"></textarea>
-
+                                    {{ form_row(form.content) }}
                                 </div>
                             </div>
                         </div> <!-- / .row -->
-                        <div class="row justify-content-center">
-                            <div class="col-auto">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group mb-7 mb-md-9">
 
-                                <!-- Submit -->
-                                <button type="submit" class="btn btn-primary lift">
-                                    Send message
-                                </button>
-
+                                    {{ form_row(form.file) }}
+                                </div>
                             </div>
                         </div> <!-- / .row -->
+
                     </form>
+                    {{ form_end(form) }}
 
                 </div>
             </div> <!-- / .row -->
