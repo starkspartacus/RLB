@@ -7,6 +7,7 @@ use App\Entity\Contacte;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -19,10 +20,22 @@ class ContacteType extends AbstractType
         $builder
             ->add('prenom', TextType::class)
             ->add('nom', TextType::class)
-            ->add('telephone', )
+            ->add('telephone', TextType::class,[
+                'attr' => [
+                    'placeholder' => 'Votre Téléphone*'
+                ]
+            ] )
             ->add('email')
-            ->add('content')
-            ->add('file', DropzoneType::class)
+            ->add('content', TextareaType::class, [
+                'attr' => [
+                    'placeholder' => 'Votre Message*',
+                    'class' => 'content-message'
+
+                ]
+            ])
+            ->add('file', DropzoneType::class, [
+                'attr' => ['placeholder' => '8Mo maximum. Cliquez ou faites glisser pour importer']
+            ])
             ->add('Envoyer', SubmitType::class)
         ;
     }
