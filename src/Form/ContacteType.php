@@ -28,6 +28,7 @@ class ContacteType extends AbstractType
             ->add('email')
             ->add('content', TextareaType::class, [
                 'attr' => [
+                    'required' => 'true',
                     'placeholder' => 'Votre Message*',
                     'class' => 'content-message'
 
