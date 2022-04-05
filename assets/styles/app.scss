@@ -227,3 +227,45 @@ footer li p
   position: relative;
   bottom: 8rem;
 }
+
+.videobg
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -99;
+  filter: brightness(50%);
+}
+
+.videobg video
+{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.block-choisir
+{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.content-message
+{
+  height: 80px;
+}
+
+.block-message
+{
+  display: none;
+}
+
+.apparai-message
+{
+  display: block;
+}

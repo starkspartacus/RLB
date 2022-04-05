@@ -1,0 +1,225 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}contact - Rambaud Labrosse{% endblock %}
+
+{% block body %}
+    <!-- WELCOME -->
+    <section class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover" style="background-image: url({{ asset('media/images/help.jpg') }});">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+
+                    <!-- Heading -->
+                    <h1 class="display-2 fw-bold text-white">
+                        Nous contacter
+                    </h1>
+
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+
+    <!-- SHAPE -->
+    <div class="position-relative">
+        <div class="shape shape-bottom shape-fluid-x text-light">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>      </div>
+    </div>
+
+    <!-- INFO -->
+    <section class="py-7 py-md-9 border-bottom border-gray-300" id="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+
+                    <!-- Button -->
+                    <a href="#info" class="btn btn-white btn-rounded-circle shadow mt-n11 mt-md-n13" data-scroll>
+                        <i class="fe fe-arrow-down"></i>
+                    </a>
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row">
+                <div class="col-12 col-md-4 text-center border-end border-gray-300">
+                    <!-- Heading -->
+                    <h6 class="text-uppercase text-gray-700 mb-1">
+                        Message
+                    </h6>
+
+                    <!-- Link -->
+                    <div class="mb-5 mb-md-0">
+                        <a href="#!" class="h4 text-primary">
+                            chat!
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-4 text-center border-end border-gray-300">
+
+                    <!-- Heading -->
+                    <h6 class="text-uppercase text-gray-700 mb-1">
+                        appel
+                    </h6>
+
+                    <!-- Link -->
+                    <div class="mb-5 mb-md-0">
+                        <a href="#!" class="h4">
+                            (+33) 123-4567
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-4 text-center">
+
+                    <!-- Heading -->
+                    <h6 class="text-uppercase text-gray-700 mb-1">
+                        Email
+                    </h6>
+
+                    <!-- Link -->
+                    <a href="#!" class="h4">
+                        email@rambaud-labrosse.com
+                    </a>
+
+                </div>
+            </div> <!-- / .row -->
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 autre-message">
+
+                    <!-- Card -->
+                    <div class="card card-border border-primary shadow-lg mb-6 mb-md-8 lift lift-lg mt-5">
+                        <div class="card-body text-center">
+
+                            <!-- Icon -->
+                            <div class="icon-circle bg-primary text-white mb-5">
+                                <i class="fe fe-users"></i>
+                            </div>
+
+                            <!-- Heading -->
+                            <h4 class="fw-bold">
+                                Autre
+                            </h4>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mt-5">
+
+                    <!-- Card -->
+                    <div class="card card-border border-success shadow-lg mb-6 mb-md-8 lift lift-lg">
+                        <div class="card-body text-center">
+
+                            <!-- Icon -->
+                            <div class="icon-circle bg-success text-white mb-5">
+                                <i class="fe fe-clock"></i>
+                            </div>
+
+                            <!-- Heading -->
+                            <h4 class="fw-bold">
+                                Particulier
+                            </h4>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- FORM -->
+    <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+
+                    <!-- Heading -->
+                    <h2 class="fw-bold">
+
+                    </h2>
+
+                    <!-- Text -->
+                    <p class="fs-lg text-muted mb-7 mb-md-9">
+                    </p>
+
+                </div>
+            </div> <!-- / .row -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-12 col-lg-10 block-message display-message">
+
+                    <!-- Form -->
+                    {{ form_start(form) }}
+
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group mb-5 ">
+                                    <!-- Input -->
+                                    {{ form_row(form.prenom, {'label': 'Prénoms'}) }}
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group mb-5 ">
+                                    <!-- Input -->
+                                    {{ form_row(form.nom, {'label': 'Nom'}) }}
+
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group mb-5 ">
+                                    <!-- Input -->
+                                    {{ form_row(form.email, {'label': 'Email'}) }}
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group mb-5 ">
+                                    <!-- Input -->
+                                    {{ form_row(form.telephone, {'label': 'Téléphone'}) }}
+
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group mb-7 mb-md-9">
+
+                                    {{ form_row(form.content, {'label': 'Message'}) }}
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group mb-7 mb-md-9">
+
+                                    {{ form_row(form.file) }}
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+
+
+                    {{ form_end(form) }}
+                    <small class="">
+                        En cliquant sur "Envoyer", vous acceptez que vos données
+                        soient utilisées dans le cadre<br> de notre démarche commerciale.
+                    </small>
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </section>
+{% endblock %}
