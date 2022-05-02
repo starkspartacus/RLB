@@ -242,6 +242,72 @@
 
                 </div>
             </div> <!-- / .row -->
+
+            <!-- form professionnel -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-12 col-lg-10 block-message-pro display-message">
+
+                    <!-- Form -->
+                    {{ form_start(form) }}
+
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group mb-5 ">
+                                <!-- Input -->
+                                {{ form_row(formPro.prenomspro, {'label': 'Prénoms'}) }}
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group mb-5 ">
+                                <!-- Input -->
+                                {{ form_row(formPro.NomPro, {'label': 'Nom'}) }}
+
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group mb-5 ">
+                                <!-- Input -->
+                                {{ form_row(formPro.EmailPro, {'label': 'Email'}) }}
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group mb-5 ">
+                                <!-- Input -->
+                                {{ form_row(formPro.TelephonePro, {'label': 'Téléphone'}) }}
+
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group mb-7 mb-md-9">
+
+                                {{ form_row(formPro.MessagePro, {'label': 'Message'}) }}
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group mb-7 mb-md-9">
+
+                                {{ form_row(formPro.FichiersPro) }}
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+
+
+                    {{ form_end(form) }}
+                    <small class="">
+                        En cliquant sur "Envoyer", vous acceptez que vos données
+                        soient utilisées dans le cadre<br> de notre démarche commerciale.
+                    </small>
+
+                </div>
+            </div> <!-- / .row -->
         </div> <!-- / .container -->
     </section>
 {% endblock %}
