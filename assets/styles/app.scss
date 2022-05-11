@@ -189,6 +189,11 @@ footer li p
   font-family: Roboto, sans-serif;
 }
 
+.en_ligne
+{
+  font-weight: 700;
+}
+
 .btn-devis
 {
   display: flex;
@@ -266,6 +271,16 @@ footer li p
 }
 
 .apparai-message
+{
+  display: block;
+}
+
+.block-message-pro
+{
+  display: none;
+}
+
+.apparai-block-message-pro
 {
   display: block;
 }
