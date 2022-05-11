@@ -17,9 +17,6 @@
                     <span class="text-warning " data-typed='{"strings": ["Flottes", "Gestion de biens", "Assurance", "Sinistres"]}'></span>
                 </h1>
 
-
-
-
             </div>
         </div> <!-- / .row -->
     </div> <!-- / .container -->
@@ -27,33 +24,29 @@
 
 
 <!-- BLOG -->
-<section class="py-8 py-md-11 bg-gradient-light-white ">
-    <div class="container">
+<section class="py-8 py-md-11 bg-gradient-dark-black ">
 
-        <div class="row justify-content-lg-around justify-content-start">
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
+      <div class="col-12 " data-aos="zoom-in">
+        <div class="row justify-content-around">
+
+            <div class="col-12 col-md-5 col-lg-2">
 
                 <!-- Card -->
                 <div class="card mb-6 mb-lg-0 pt-14 overlay overlay-black overlay-30 bg-cover shadow-light-lg lift lift-lg" style="background-image: url({{ asset('media/images/Gestion_Flottes_Auto.jpg') }});">
 
                     <!-- Body -->
                     <a class="card-body mt-auto" href="#">
-
                         <!-- Heading -->
                         <h2 class="text-white header-devis">
                             Gestion Flottes Automobiles
                         </h2>
-
                     </a>
-
-                                       <!-- Divider -->
-                    <hr class="card-meta-divider bg-white-20">
 
                 </div>
 
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="col-12 col-md-5 col-lg-2">
 
                 <!-- Card -->
                 <div class="card mb-6 mb-lg-0 pt-14 overlay overlay-black overlay-30 bg-cover shadow-light-lg lift lift-lg" style="background-image: url({{ asset('media/images/paiement.jpg') }});">
@@ -68,27 +61,22 @@
 
                     </a>
 
-
-                    <!-- Divider -->
-                    <hr class="card-meta-divider bg-white-20">
-
                 </div>
 
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="col-12 col-md-5 col-lg-2">
 
                 <!-- Card -->
                 <div class="card mb-6 mb-lg-0 pt-14 overlay overlay-black overlay-30 bg-cover shadow-light-lg lift lift-lg" style="background-image: url({{ asset('media/images/Espace_client_admin.jpg') }});">
 
                     <!-- Body -->
-                    <a class="card-body mt-auto" href="https://client.rambaud-labrosse.com/login">
+                    <a class="card-body mt-auto" href="https://client.rambaud-labrosse.com/login" target="_blank">
 
                         <!-- Heading -->
                         <h2 class="text-white header-devis">
                             Espace client Administrateur de bien
                         </h2>
-
 
                     </a>
 
@@ -97,7 +85,7 @@
 
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="col-12 col-md-5 col-lg-2">
 
                 <!-- Card -->
                 <div class="card mb-6 mb-lg-0 pt-14 overlay overlay-black overlay-30 bg-cover shadow-light-lg lift lift-lg" style="background-image: url({{ asset('media/images/Espace_client_Synd.jpg') }});">
@@ -109,18 +97,14 @@
                         <h2 class="text-white header-devis">
                             Espace client Syndics
                         </h2>
-
-
                     </a>
-
-
                 </div>
-
             </div>
         </div> <!-- / .row -->
+
     </div> <!-- / .container -->
 </section>
-
+{{ include('acceuil/devistemplate.html.twig') }}
 
 
 
