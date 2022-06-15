@@ -24,7 +24,7 @@ class ContacteType extends AbstractType
                 'attr' => [
                     'placeholder' => 'Votre Téléphone*'
                 ]
-            ] )
+            ])
             ->add('email')
             ->add('content', TextareaType::class, [
                 'attr' => [

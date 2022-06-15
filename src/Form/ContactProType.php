@@ -6,6 +6,7 @@ use App\Entity\ContactePro;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\UX\Dropzone\Form\DropzoneType;
 
 class ContactProType extends AbstractType
 {
@@ -17,7 +18,9 @@ class ContactProType extends AbstractType
             ->add('EmailPro')
             ->add('TelephonePro')
             ->add('MessagePro')
-            ->add('FichiersPro')
+            ->add('FichiersPro', DropzoneType::class , [
+                'attr' => ['placeholder' => '8Mo maximum. Cliquez ou faites glisser pour importer']
+            ])
         ;
     }
 
